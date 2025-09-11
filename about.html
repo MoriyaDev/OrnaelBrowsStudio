@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ornelle Brows Studio - אודות</title>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div id="nav"></div>
+
+
+    <main class="about-section">
+        <h2 data-aos="fade-up" style="text-align:center;">אודותינו</h2>
+        <div class="about-grid">
+
+            <div class="about-card" data-aos="fade-up" data-aos-delay="100">
+                <img src="./images/1 (1).png" alt="מנהל העסק פיקטיבי">
+                <h3>אורנאל דהן</h3>
+                <p>מייסדת ומנהלת העסק מאז 2020, עם מאות לקוחות מרוצות שממשיכות לחזור ולהמליץ.</p>
+                <a class="btn-primary" onclick="toggleInfo(this)">READ MORE</a>
+                <div class="extra-info">
+                    אורנאל פתחה את העסק ב-2020, ומאז צברה מוניטין רב בקרב לקוחות מרוצות. עם ניסיון עשיר בתחום עיצוב
+                    ושיקום הגבות, היא משלבת טכניקות חדשניות כמו מיקרובליידינג כדי להעניק לכל לקוחה מראה טבעי, מחמיא ובעל
+                    ביטחון עצמי. לקוחות רבות חוזרות שוב ושוב, מה שמעיד על האיכות והשירות האישי שהיא מעניקה.
+                </div>
+            </div>
+
+
+
+            <div class="about-card" data-aos="fade-up" data-aos-delay="200">
+                <img src="./images/1 (2).jpg" alt="הסטודיו שלנו">
+                <h3>הסטודיו שלנו</h3>
+                <p>סטודיו בוטיק מעוצב ומזמין, המשלב מקצועיות ואווירה רגועה.</p>
+                <a class="btn-primary" onclick="toggleInfo(this)">READ MORE</a>
+                <div class="extra-info">
+                    הסטודיו נבנה מתוך מחשבה על נוחות ושקט ללקוחות. הוא מצויד במכשור המתקדם ביותר ובחומרים איכותיים,
+                    תוך שמירה על סטריליזציה ובטיחות מקסימלית – כדי להבטיח לך חוויה נעימה ותוצאה מושלמת.
+                </div>
+            </div>
+
+            <div class="about-card" data-aos="fade-up" data-aos-delay="300">
+                <img src="./images/1 (1).jpeg" alt="התעודות שלנו">
+                <h3>התעודות שלנו</h3>
+                <p>מגוון הסמכות והכשרות בינלאומיות בתחום המיקרובליידינג והאסתטיקה.</p>
+                <a class="btn-primary" onclick="toggleInfo(this)">READ MORE</a>
+                <div class="extra-info">
+                    אורנאל מחזיקה בתעודות מקצועיות מטעם גופים מוכרים בארץ ובעולם, כולל הכשרות מתקדמות בתחום
+                    מיקרובליידינג,
+                    עיצוב גבות ושיטות פיברואוס. ההשקעה המתמדת בלימודים ובהתמקצעות מבטיחה ללקוחות את הטיפול העדכני
+                    והאיכותי ביותר.
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <div id="footer"></div>
+
+    <script>
+        fetch("footer.html")
+            .then(response => response.text())
+            .then(data => document.getElementById("footer").innerHTML = data);
+    </script>
+
+      <script>
+fetch("nav.html")
+  .then(response => response.text())
+  .then(data => {
+      document.getElementById("nav").innerHTML = data;
+
+      const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+      const nav = document.querySelector('.nav');
+
+      mobileMenuToggle.addEventListener('click', () => {
+          nav.classList.toggle('active');
+      });
+  });
+</script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, offset: 100, once: true });
+
+        function toggleInfo(button) {
+            const info = button.nextElementSibling;
+            info.style.display = info.style.display === 'block' ? 'none' : 'block';
+            button.textContent = info.style.display === 'block' ? 'SHOW LESS' : 'READ MORE';
+        }
+
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const nav = document.querySelector('.nav');
+
+        mobileMenuToggle.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+    </script>
+</body>
+
+</html>

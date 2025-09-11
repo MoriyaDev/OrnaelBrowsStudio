@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ornelle Brows Studio - מיקרובליידינג ועיצוב גבות</title>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+
+
+</head>
+<body>
+
+    <div id="nav"></div>
+
+    <main class="main">
+
+
+
+        <div class="slider-container">
+            <div class="slider" id="slider">
+                <div class="slide active"
+                    style="background-image: url('https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?...')">
+                    <div class="slide-overlay">
+                        <div class="slide-content" data-aos="fade-up">
+                            <h2>עיצוב גבות מושלם</h2>
+                            <p>אצל אורנאל תקבלי עיצוב גבות מקצועי שמותאם אישית למבנה הפנים שלך – מראה טבעי ומדויק.</p>
+                            <a href="contact.html" class="btn-primary">קבעי תור עכשיו</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide" style="background-image: url('./images/1\ \(1\).webp')">
+                    <div class="slide-overlay">
+                        <div class="slide-content" data-aos="fade-up">
+                            <h2>מיקרובליידינג ברמה גבוהה</h2>
+                            <p>טכניקת מיקרובליידינג מתקדמת – קווים עדינים שמחקים שיער טבעי, לתוצאה מושלמת שמחזיקה לאורך
+                                זמן.</p>
+                            <a href="media.html" class="btn-primary">צפי בעבודות</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide" style="background-image: url('./images/הורדה.jpg')">
+                    <div class="slide-overlay">
+                        <div class="slide-content" data-aos="fade-up">
+                            <h2>הרמת גבות טבעית</h2>
+                            <p>טיפול הרמה עדין ומקצועי לגבות מלאות ומסודרות, שמעניק מראה צעיר ורענן.</p>
+                            <a href="about.html" class="btn-primary">למדו עוד</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide" style="background-image: url('./images/photo-1522337360788-8b13dee7a37e.jpg')">
+                    <div class="slide-overlay">
+                        <div class="slide-content" data-aos="fade-up">
+                            <h2>חווית יופי מותאמת אישית</h2>
+                            <p>כל לקוחה אצל אורנאל מקבלת יחס אישי, התאמה מלאה לצרכים שלה ותוצאה מושלמת שמחמיאה לפנים.
+                            </p>
+                            <a href="faq.html" class="btn-primary">שאלות נפוצות</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slider-nav">
+                <div class="slider-dot active" data-slide="0"></div>
+                <div class="slider-dot" data-slide="1"></div>
+                <div class="slider-dot" data-slide="2"></div>
+                <div class="slider-dot" data-slide="3"></div>
+            </div>
+        </div>
+
+     <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ornelle Brows Studio - מיקרובליידינג ועיצוב גבות</title>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- סטיילים נוספים לגבות -->
+    <style>
+        .eyebrow-progress {
+            width: 200px;
+            height: 80px;
+            margin: 20px;
+        }
+
+        .eyebrow-svg {
+            width: 100%;
+            height: 100%;
+            overflow: visible;
+        }
+
+        .eyebrow-fill {
+            transition: stroke-dashoffset 0.3s ease-out;
+        }
+
+        .hair-stroke {
+            transition: opacity 0.5s ease-out;
+        }
+
+        .eye {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 50px; 
+            margin-bottom: 2px 0;
+            margin-top: 60px 0;
+        }
+
+        @keyframes growHair {
+            from {
+                stroke-dasharray: 0 50;
+                opacity: 0;
+            }
+            to {
+                stroke-dasharray: 15 35;
+                opacity: 0.7;
+            }
+        }
+
+        .progress-text {
+            text-align: center;
+            margin-top: 20px;
+            font-weight: bold;
+            color: #4a3728;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+      <!-- שתי הגבות הריאליסטיות -->
+    <div class="eye">
+        <!-- גבה ראשונה -->
+        <div class="eyebrow-progress">
+            <svg class="eyebrow-svg" viewBox="0 0 200 80">
+                <!-- הגדרת גרדיאנט לגבה -->
+                <defs>
+                    <linearGradient id="eyebrowGradient1" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" style="stop-color:#2c1810;stop-opacity:1" />
+                        <stop offset="30%" style="stop-color:#4a3728;stop-opacity:1" />
+                        <stop offset="70%" style="stop-color:#3d2b1f;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#2c1810;stop-opacity:1" />
+                    </linearGradient>
+
+                    <!-- פילטר לטשטוש קל -->
+                    <filter id="soften1">
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="0.5" />
+                    </filter>
+                </defs>
+
+                <!-- שכבת הבסיס -->
+                <path class="eyebrow-base" d="M20 45 Q40 25, 70 30 Q100 32, 130 35 Q160 38, 180 50" stroke="#e0d5c7"
+                    stroke-width="12" fill="none" opacity="0.3" />
+
+                <!-- הגבה הראשית -->
+                <path class="eyebrow-fill eyebrow-1" d="M20 45 Q40 25, 70 30 Q100 32, 130 35 Q160 38, 180 50"
+                    stroke="url(#eyebrowGradient1)" stroke-width="12" fill="none" stroke-dasharray="300"
+                    stroke-dashoffset="300" stroke-linecap="round" filter="url(#soften1)" />
+
+                <!-- שיערות בודדות לריאליזם -->
+                <g class="hair-group-1">
+                    <path class="hair-stroke-1" d="M25 42 L22 35" stroke="#4a3728" stroke-width="1.5" fill="none"
+                        opacity="0" stroke-linecap="round" />
+                    <path class="hair-stroke-1" d="M35 35 L32 28" stroke="#4a3728" stroke-width="1.5" fill="none"
+                        opacity="0" stroke-linecap="round" />
+                    <path class="hair-stroke-1" d="M45 32 L43 25" stroke="#4a3728" stroke-width="1.5" fill="none"
+                        opacity="0" stroke-linecap="round" />
+                    <path class="hair-stroke-1" d="M55 33 L54 26" stroke="#4a3728" stroke-width="1.5" fill="none"
+                        opacity="0" stroke-linecap="round" />
+                    <path class="hair-stroke-1" d="M65 34 L64 27" stroke="#4a3728" stroke-width="1.5" fill="none"
+                        opacity="0" stroke-linecap="round" />
+                    <path class="hair-stroke-1" d="M75 35 L74 28" stroke="#4a3728" stroke-width="1.5" fill="none"
+                        opacity="0" stroke-linecap="round" />
+                    <path class="hair-stroke-1" d="M85 36 L84 29" stroke="#4a3728" stroke-width="1.5" fill="none"
+                        opacity="0" stroke-linecap="round" />
+                    <path class="hair-stroke-1" d="M95 37 L94 30" stroke="#4a3728" stroke-width="1.5" fill="none"
+                        opacity="0" stroke-linecap="round" />
+                    <path class="hair-stroke-1" d="M105 38 L104 31" stroke="#4a3728" stroke-width="1.5" fill="none"
+                        opacity="0" stroke-linecap="round" />
+                    <path class="hair-stroke-1" d="M115 39 L114 32" stroke="#4a3728" stroke-width="1.5" fill="none"
+                        opacity="0" stroke-linecap="round" />
+                    <path class="hair-stroke-1" d="M125 40 L124 33" stroke="#4a3728" stroke-width="1.5" fill="none"
+                        opacity="0" stroke-linecap="round" />
+                    <path class="hair-stroke-1" d="M135 42 L134 35" stroke="#4a3728" stroke-width="1.5" fill="none"
+                        opacity="0" stroke-linecap="round" />
+                    <path class="hair-stroke-1" d="M145 44 L144 37" stroke="#4a3728" stroke-width="1.5" fill="none"
+                        opacity="0" stroke-linecap="round" />
+                    <path class="hair-stroke-1" d="M155 46 L154 39" stroke="#4a3728" stroke-width="1.5" fill="none"
+                        opacity="0" stroke-linecap="round" />
+                    <path class="hair-stroke-1" d="M165 48 L164 41" stroke="#4a3728" stroke-width="1.5" fill="none"
+                        opacity="0" stroke-linecap="round" />
+
+                    <!-- שיערות נוספות בכיוונים שונים -->
+                    <path class="hair-stroke-1" d="M30 40 L28 47" stroke="#4a3728" stroke-width="1.5" fill="none"
+                        opacity="0" stroke-linecap="round" />
+                    <path class="hair-stroke-1" d="M50 31 L48 38" stroke="#4a3728" stroke-width="1.5" fill="none"
+                        opacity="0" stroke-linecap="round" />
+                    <path class="hair-stroke-1" d="M70 32 L68 39" stroke="#4a3728" stroke-width="1.5" fill="none"
+                        opacity="0" stroke-linecap="round" />
+                    <path class="hair-stroke-1" d="M90 34 L88 41" stroke="#4a3728" stroke-width="1.5" fill="none"
+                        opacity="0" stroke-linecap="round" />
+                    <path class="hair-stroke-1" d="M110 36 L108 43" stroke="#4a3728" stroke-width="1.5" fill="none"
+                        opacity="0" stroke-linecap="round" />
+                    <path class="hair-stroke-1" d="M130 38 L128 45" stroke="#4a3728" stroke-width="1.5" fill="none"
+                        opacity="0" stroke-linecap="round" />
+                    <path class="hair-stroke-1" d="M150 42 L148 49" stroke="#4a3728" stroke-width="1.5" fill="none"
+                        opacity="0" stroke-linecap="round" />
+                </g>
+            </svg>
+        </div>
+        
+        <!-- גבה שנייה (מותאמת להיות מראה של הראשונה) -->
+        <div class="eyebrow-progress">
+            <svg class="eyebrow-svg" viewBox="0 0 200 80" style="transform: scaleX(-1);">
+                <!-- הגדרת גרדיאנט לגבה -->
+                <defs>
+                    <linearGradient id="eyebrowGradient2" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" style="stop-color:#2c1810;stop-opacity:1" />
+                        <stop offset="30%" style="stop-color:#4a3728;stop-opacity:1" />
+                        <stop offset="70%" style="stop-color:#3d2b1f;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#2c1810;stop-opacity:1" />
+                    </linearGradient>
+
+                    <!-- פילטר לטשטוש קל -->
+                    <filter id="soften2">
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="0.5" />
+                    </filter>
+                </defs>
+
+                <!-- שכבת הבסיס -->
+                <path class="eyebrow-base" d="M20 45 Q40 25, 70 30 Q100 32, 130 35 Q160 38, 180 50" stroke="#e0d5c7"
+                    stroke-width="12" fill="none" opacity="0.3" />
+
+                <!-- הגבה הראשית -->
+                <path class="eyebrow-fill eyebrow-2" d="M20 45 Q40 25, 70 30 Q100 32, 130 35 Q160 38, 180 50"
+                    stroke="url(#eyebrowGradient2)" stroke-width="12" fill="none" stroke-dasharray="300"
+                    stroke-dashoffset="300" stroke-linecap="round" filter="url(#soften2)" />
+
+                <!-- שיערות בודדות לריאליזם -->
+                <g class="hair-group-2">
+                    <path class="hair-stroke-2" d="M25 42 L22 35" stroke="#4a3728" stroke-width="1.5" fill="none"
+                        opacity="0" stroke-linecap="round" />
+                    <path class="hair-stroke-2" d="M35 35 L32 28" stroke="#4a3728" stroke-width="1.5" fill="none"
+                        opacity="0" stroke-linecap="round" />
+                    <path class="hair-stroke-2" d="M45 32 L43 25" stroke="#4a3728" stroke-width="1.5" fill="none"
+                        opacity="0" stroke-linecap="round" />
+                    <path class="hair-stroke-2" d="M55 33 L54 26" stroke="#4a3728" stroke-width="1.5" fill="none"
+                        opacity="0" stroke-linecap="round" />
+                    <path class="hair-stroke-2" d="M65 34 L64 27" stroke="#4a3728" stroke-width="1.5" fill="none"
+                        opacity="0" stroke-linecap="round" />
+                    <path class="hair-stroke-2" d="M75 35 L74 28" stroke="#4a3728" stroke-width="1.5" fill="none"
+                        opacity="0" stroke-linecap="round" />
+                    <path class="hair-stroke-2" d="M85 36 L84 29" stroke="#4a3728" stroke-width="1.5" fill="none"
+                        opacity="0" stroke-linecap="round" />
+                    <path class="hair-stroke-2" d="M95 37 L94 30" stroke="#4a3728" stroke-width="1.5" fill="none"
+                        opacity="0" stroke-linecap="round" />
+                    <path class="hair-stroke-2" d="M105 38 L104 31" stroke="#4a3728" stroke-width="1.5" fill="none"
+                        opacity="0" stroke-linecap="round" />
+                    <path class="hair-stroke-2" d="M115 39 L114 32" stroke="#4a3728" stroke-width="1.5" fill="none"
+                        opacity="0" stroke-linecap="round" />
+                    <path class="hair-stroke-2" d="M125 40 L124 33" stroke="#4a3728" stroke-width="1.5" fill="none"
+                        opacity="0" stroke-linecap="round" />
+                    <path class="hair-stroke-2" d="M135 42 L134 35" stroke="#4a3728" stroke-width="1.5" fill="none"
+                        opacity="0" stroke-linecap="round" />
+                    <path class="hair-stroke-2" d="M145 44 L144 37" stroke="#4a3728" stroke-width="1.5" fill="none"
+                        opacity="0" stroke-linecap="round" />
+                    <path class="hair-stroke-2" d="M155 46 L154 39" stroke="#4a3728" stroke-width="1.5" fill="none"
+                        opacity="0" stroke-linecap="round" />
+                    <path class="hair-stroke-2" d="M165 48 L164 41" stroke="#4a3728" stroke-width="1.5" fill="none"
+                        opacity="0" stroke-linecap="round" />
+
+                    <!-- שיערות נוספות בכיוונים שונים -->
+                    <path class="hair-stroke-2" d="M30 40 L28 47" stroke="#4a3728" stroke-width="1.5" fill="none"
+                        opacity="0" stroke-linecap="round" />
+                    <path class="hair-stroke-2" d="M50 31 L48 38" stroke="#4a3728" stroke-width="1.5" fill="none"
+                        opacity="0" stroke-linecap="round" />
+                    <path class="hair-stroke-2" d="M70 32 L68 39" stroke="#4a3728" stroke-width="1.5" fill="none"
+                        opacity="0" stroke-linecap="round" />
+                    <path class="hair-stroke-2" d="M90 34 L88 41" stroke="#4a3728" stroke-width="1.5" fill="none"
+                        opacity="0" stroke-linecap="round" />
+                    <path class="hair-stroke-2" d="M110 36 L108 43" stroke="#4a3728" stroke-width="1.5" fill="none"
+                        opacity="0" stroke-linecap="round" />
+                    <path class="hair-stroke-2" d="M130 38 L128 45" stroke="#4a3728" stroke-width="1.5" fill="none"
+                        opacity="0" stroke-linecap="round" />
+                    <path class="hair-stroke-2" d="M150 42 L148 49" stroke="#4a3728" stroke-width="1.5" fill="none"
+                        opacity="0" stroke-linecap="round" />
+                </g>
+            </svg>
+        </div>
+    </div>
+    
+    <!-- הסקריפט החדש לשתי הגבות -->
+    <script>
+        const eyebrow1 = document.querySelector('.eyebrow-1');
+        const eyebrow2 = document.querySelector('.eyebrow-2');
+        const hairStrokes1 = document.querySelectorAll('.hair-stroke-1');
+        const hairStrokes2 = document.querySelectorAll('.hair-stroke-2');
+        const progressText = document.getElementById('progressText');
+        const maxLength = 300;
+
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.scrollY;
+            const docHeight = document.body.scrollHeight - window.innerHeight;
+            const scrollPercent = Math.min(scrollTop / docHeight, 1);
+
+            const dashOffset = maxLength - (scrollPercent * maxLength);
+            
+            if (eyebrow1) {
+                eyebrow1.style.strokeDashoffset = dashOffset;
+            }
+            if (eyebrow2) {
+                eyebrow2.style.strokeDashoffset = dashOffset;
+            }
+
+            if (progressText) {
+                const percentage = Math.round(scrollPercent * 100);
+                progressText.textContent = `מתמלאת בגלילה ${percentage}%`;
+            }
+
+            hairStrokes1.forEach((hair, index) => {
+                const hairProgress = scrollPercent * hairStrokes1.length;
+                if (hairProgress > index) {
+                    const opacity = Math.min((hairProgress - index) * 2, 0.7);
+                    hair.style.opacity = opacity;
+                } else {
+                    hair.style.opacity = 0;
+                }
+            });
+
+            hairStrokes2.forEach((hair, index) => {
+                const hairProgress = scrollPercent * hairStrokes2.length;
+                if (hairProgress > index) {
+                    const opacity = Math.min((hairProgress - index) * 2, 0.7);
+                    hair.style.opacity = opacity;
+                } else {
+                    hair.style.opacity = 0;
+                }
+            });
+
+            if (scrollPercent > 0.8) {
+                if (eyebrow1) eyebrow1.style.filter = 'brightness(1.1) contrast(1.1) url(#soften1)';
+                if (eyebrow2) eyebrow2.style.filter = 'brightness(1.1) contrast(1.1) url(#soften2)';
+            } else {
+                if (eyebrow1) eyebrow1.style.filter = 'url(#soften1)';
+                if (eyebrow2) eyebrow2.style.filter = 'url(#soften2)';
+            }
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <section class="services-section">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">השירותים שלי</h2>
+
+                <div class="services-grid">
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="service-icon">
+                            <i class="fas fa-cut"></i>
+                        </div>
+                        <h3>עיצוב גבות</h3>
+                        <p>עיצוב מקצועי בפינצטה ושעווה, מותאם למבנה הפנים – למראה טבעי ומחמיא.</p>
+                        <a href="about.html" class="btn-primary">קראי עוד</a>
+                    </div>
+
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="service-icon">
+                            <i class="fas fa-magic"></i>
+                        </div>
+                        <h3>מיקרובליידינג</h3>
+                        <p>טכניקה מתקדמת ליצירת גבות מלאות עם קווים עדינים שנראים כמו שיער אמיתי.</p>
+                        <a href="media.html" class="btn-primary">גלי תוצאות</a>
+                    </div>
+
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="service-icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <h3>הרמת גבות</h3>
+                        <p>טיפול להרמת הגבות למראה מובהק ומרשים, המדגיש את מראה העיניים באופן טבעי.</p>
+                        <a href="contact.html" class="btn-primary">קבעי תור</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer"></div>
+  <!-- לפני סגירת ה-body -->
+  <script>
+    // קודם נטען את ה-footer
+    fetch("footer.html")
+      .then(response => response.text())
+      .then(data => document.getElementById("footer").innerHTML = data);
+  </script>
+
+  <script>
+    // נטען את ה-nav
+    fetch("nav.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("nav").innerHTML = data;
+
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const nav = document.querySelector('.nav');
+
+        if (mobileMenuToggle && nav) {
+          mobileMenuToggle.addEventListener('click', () => {
+            nav.classList.toggle('active');
+          });
+        }
+      });
+  </script>
+
+  <script>
+    // נטען את eyebrow.html
+    fetch("eyebrow.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("eyebrow").innerHTML = data;
+      });
+  </script>
+
+  <!-- ספרייה חיצונית של AOS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <script>
+    // אתחול AOS אחרי שכל ה־DOM נטען
+    AOS.init({ duration: 1000, offset: 100, once: true });
+  </script>
+
+  <script>
+    // לוגיקה של הסליידר (מותאמת לרספונסיביות)
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.slider-dot');
+    let currentSlide = 0;
+    let interval;
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === index);
+        dots[i].classList.toggle('active', i === index);
+      });
+    }
+
+    function startSlider() {
+      interval = setInterval(() => {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+      }, 5000);
+    }
+
+    function stopSlider() {
+      clearInterval(interval);
+      currentSlide = 0;
+      showSlide(currentSlide);
+    }
+
+    function handleResponsiveSlider() {
+      if (window.innerWidth <= 768) {
+        stopSlider();
+      } else {
+        startSlider();
+      }
+    }
+
+    handleResponsiveSlider();
+    window.addEventListener('resize', handleResponsiveSlider);
+
+    dots.forEach((dot, i) => {
+      dot.addEventListener('click', () => {
+        currentSlide = i;
+        showSlide(currentSlide);
+      });
+    });
+
+    showSlide(currentSlide);
+  </script>
+</body>
+</html>

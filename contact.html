@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ornelle Brows Studio - צור קשר</title>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+        .contact-whatsapp {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .whatsapp-button {
+            display: inline-block;
+            padding: 12px 20px;
+            background-color: #25D366;
+            color: white;
+            font-weight: bold;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .whatsapp-button:hover {
+            background-color: #1ebe5d;
+        }
+
+/* ====== Contact Quiz Container ====== */
+.contact-quiz-container {
+    display: flex;
+    justify-content: center;     
+    align-items: stretch;        
+    gap: 30px;                    
+    flex-wrap: wrap;              
+    width: 90%;                  
+    margin: 50px auto;           
+    padding: 20px 0;             
+}
+
+.contact-quiz-container section {
+    background-color: #fffaf3;    
+    padding: 25px 20px;
+    border-radius: 18px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    flex: 1 1 300px;           
+    text-align: center;
+    display: flex;
+    flex-direction: column;     
+    justify-content: space-between; 
+    min-height: 400px;            
+    transition: transform 0.3s ease;
+}
+
+.contact-quiz-container section:hover {
+    transform: translateY(-3px);
+}
+
+@media (max-width: 1000px) {
+    .contact-quiz-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-quiz-container section {
+        width: 90%;               
+        min-height: auto;           
+    }
+}
+
+
+    </style>
+</head>
+
+<body>
+    <div id="nav"></div>
+
+
+    <main data-aos="fade-up">
+
+        <div class="contact-quiz-container">
+            <section class="contact-whatsapp">
+    <h2 class="section-title">צור קשר מהיר בווטסאפ</h2>
+    <a href="https://wa.me/972535508590?text=%D7%94%D7%99%D7%99%20%D7%90%D7%95%D7%A8%D7%A0%D7%90%D7%9C%20%D7%A9%D7%9E%D7%A2%D7%AA%D7%99%20%D7%A2%D7%9C%20%D7%94%D7%A2%D7%A1%D7%A7%20%D7%94%D7%9E%D7%93%D7%94%D7%99%D7%9D%20%D7%A9%D7%9C%D7%9A!%F0%9F%92%84%F0%9F%92%84%F0%9F%92%84" target="_blank"
+        class="whatsapp-button">
+        שלח הודעה לאורנאל בווטסאפ
+    </a>
+</section>
+
+            <section class="contact-section">
+                <h2 class="section-title">צור קשר איתנו</h2>
+                <form id="contactForm" action="thankyou.html" method="GET">
+                    <label for="name">שם:</label>
+                    <input type="text" id="name" name="name" placeholder="הכנס את שמך">
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="example@mail.com">
+
+                    <label for="message">הערות:</label>
+                    <textarea id="message" name="message" placeholder="כתוב כאן את ההערות שלך"></textarea>
+
+                    <div id="errorMsg" class="error"></div>
+                    <button type="submit">שלח</button>
+                </form>
+            </section>
+
+            <section class="bonus-quiz">
+                <h2 class="section-title">בוא ניראה אותך! </h2>
+                <div id="quizContainer">
+                    <div id="questionContainer"></div>
+                    <div id="answerButtons" class="answer-buttons"></div>
+                    <div id="feedback"></div>
+                    <button id="nextButton" style="display:none;">שאלה הבאה</button>
+                    <div id="scoreContainer"></div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+
+
+
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, offset: 100, once: true });
+
+        const form = document.getElementById('contactForm');
+        const errorMsg = document.getElementById('errorMsg');
+
+        form.addEventListener('submit', function (e) {
+            e.preventDefault(); 
+            const name = form.name.value.trim();
+            const email = form.email.value.trim();
+            const message = form.message.value.trim();
+
+            if (!name || !email || !message) {
+                errorMsg.textContent = "אנא מלא את כל השדות.";
+                return;
+            }
+
+            if (!email.includes('@') || !email.includes('.')) {
+                errorMsg.textContent = "אנא הזן כתובת Email חוקית עם @ ונקודה.";
+                return;
+            }
+
+            errorMsg.textContent = "";
+            form.submit();
+        });
+
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const nav = document.querySelector('.nav');
+
+        mobileMenuToggle.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+    </script>
+    <script>
+        fetch("nav.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("nav").innerHTML = data;
+
+                const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+                const nav = document.querySelector('.nav');
+
+                mobileMenuToggle.addEventListener('click', () => {
+                    nav.classList.toggle('active');
+                });
+            });
+    </script>
+
+    <script>
+        const quiz = [
+            {
+                question: "מהו צבע הגבות הכי נפוץ לעיצוב?",
+                answers: [
+                    { text: "שחור", correct: true },
+                    { text: "בלונדיני", correct: false },
+                    { text: "אדום", correct: false },
+                    { text: "חום בהיר", correct: false }
+                ]
+            },
+            {
+                question: "מהו הכלי הנפוץ ביותר לעיצוב גבות?",
+                answers: [
+                    { text: "מכחול", correct: false },
+                    { text: "מסרק גבות", correct: true },
+                    { text: "פין ציפורן", correct: false },
+                    { text: "מברשת שיניים", correct: false }
+                ]
+            },
+            {
+                question: "מהו שלב ראשוני בעיצוב גבות?",
+                answers: [
+                    { text: "צביעה", correct: false },
+                    { text: "הסרה בעזרת פינצטה", correct: true },
+                    { text: "מריחת שמן", correct: false },
+                    { text: "תספורת שיער", correct: false }
+                ]
+            },
+            {
+                question: "כמה זמן בדרך כלל מחזיקה צביעת גבות?",
+                answers: [
+                    { text: "1-2 ימים", correct: false },
+                    { text: "1-2 שבועות", correct: false },
+                    { text: "3-4 שבועות", correct: true },
+                    { text: "6 חודשים", correct: false }
+                ]
+            },
+            {
+                question: "מה חשוב לבדוק לפני צביעת גבות?",
+                answers: [
+                    { text: "צבע השיער של הלקוחה", correct: true },
+                    { text: "מזג האוויר", correct: false },
+                    { text: "גובה הלקוחה", correct: false },
+                    { text: "גובה הגובה", correct: false }
+                ]
+            }
+        ];
+
+        let currentQuestion = 0;
+        let score = 0;
+
+        const questionContainer = document.getElementById('questionContainer');
+        const answerButtons = document.getElementById('answerButtons');
+        const feedback = document.getElementById('feedback');
+        const nextButton = document.getElementById('nextButton');
+        const scoreContainer = document.getElementById('scoreContainer');
+
+        function showQuestion() {
+            feedback.textContent = "";
+            nextButton.style.display = "none";
+            answerButtons.innerHTML = "";
+
+            const q = quiz[currentQuestion];
+            questionContainer.textContent = q.question;
+
+            q.answers.forEach(ans => {
+                const button = document.createElement('button');
+                button.textContent = ans.text;
+                button.addEventListener('click', () => selectAnswer(ans));
+                answerButtons.appendChild(button);
+            });
+        }
+
+        function selectAnswer(answer) {
+            if (answer.correct) {
+                feedback.textContent = "תשובה נכונה ✅";
+                score += 20;
+            } else {
+                feedback.textContent = "תשובה שגויה ❌";
+            }
+            nextButton.style.display = "inline-block";
+            Array.from(answerButtons.children).forEach(btn => btn.disabled = true);
+        }
+
+        nextButton.addEventListener('click', () => {
+            currentQuestion++;
+            if (currentQuestion < quiz.length) {
+                showQuestion();
+            } else {
+                questionContainer.textContent = "סיום השאלון!";
+                answerButtons.innerHTML = "";
+                nextButton.style.display = "none";
+                feedback.textContent = "";
+                scoreContainer.textContent = `הציון שלך: ${score} מתוך 100`;
+            }
+        });
+
+        showQuestion();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="he">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>תודה - Ornelle Brows Studio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
+   
+       <link rel="stylesheet" href="./css/style.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+    
+
+        .thankyou-container {
+      
+            max-width: 600px;
+            width: 90%;
+            background-color: #fff0f0;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            text-align: center;
+        }
+
+        .thankyou-container h1 {
+            font-size: 3rem;
+            color: #ff8b8b;
+            margin-bottom: 15px;
+        }
+
+        .thankyou-container p {
+            font-size: 1.2rem;
+            color: #333;
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+
+        .btn-home {
+            padding: 14px 35px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, #ffbaba, #ffd6d6);
+            color: #333;
+            font-weight: bold;
+            font-size: 1.2rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .btn-home:hover {
+            background: linear-gradient(135deg, #ff8b8b, #ffbaba);
+            color: #fff;
+        }
+
+        .social-links {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .social-links a {
+            width: 28px;
+            height: 28px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background-color: #a0d8ef;
+            color: #fff;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(160, 216, 239, 0.3);
+        }
+
+        .social-links a:hover {
+            transform: translateY(-3px) scale(1.1);
+            box-shadow: 0 8px 25px rgba(249, 193, 217, 0.4);
+        }
+
+        .social-links a.facebook:hover {
+            background-color: #a0d8ef;
+        }
+
+        .social-links a.instagram:hover {
+            background-color: #f4b6d1;
+        }
+
+        .social-links a.youtube:hover {
+            background-color: #f9c1d9;
+        }
+
+        .social-links a.linkedin:hover {
+            background-color: #a0c4ef;
+        }
+
+        .social-links a.tiktok:hover {
+            background-color: #d1b6f4;
+        }
+
+        @media (max-width: 768px) {
+            .thankyou-container {
+                padding: 30px 20px;
+            }
+
+            .thankyou-container h1 {
+                font-size: 2.5rem;
+            }
+
+            .thankyou-container p {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+<div id="nav"></div>
+
+    <main style="display: flex; justify-content: center; align-items: center; min-height: calc(100vh - 150px);">
+        <div class="thankyou-container">
+            <h1>תודה רבה</h1>
+            <p>הבקשה שלך התקבלה בהצלחה. נחזור אליך בקרוב עם כל הפרטים.</p>
+            <a href="index.html" class="btn-home">חזרה לעמוד הבית</a>
+
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-tiktok"></i></a>
+            </div>
+        </div>
+    </main>
+
+  
+    <script>       const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const nav = document.querySelector('.nav');
+
+        mobileMenuToggle.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });</script>
+         <script>
+fetch("nav.html")
+  .then(response => response.text())
+  .then(data => {
+      document.getElementById("nav").innerHTML = data;
+
+      const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+      const nav = document.querySelector('.nav');
+
+      mobileMenuToggle.addEventListener('click', () => {
+          nav.classList.toggle('active');
+      });
+  });
+</script>
+</body>
+
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ornelle Brows Studio - שאלות ותשובות</title>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+<div id="nav"></div>
+
+
+    <main class="faq-section">
+        <h2 class="section-title" data-aos="fade-up">שאלות נפוצות</h2>
+
+        <div class="accordion-item" data-aos="fade-up" data-aos-delay="100">
+            <div class="accordion-header">
+                מהו מיקרובליידינג?
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="accordion-content">
+                <p>מיקרובליידינג היא טכניקה ליצירת גבות טבעיות בעזרת קווים עדינים המדמים שיער. התוצאה עמידה לאורך
+                    זמן ומשפרת את מראה הגבות באופן טבעי ומדויק.</p>
+            </div>
+        </div>
+
+        <div class="accordion-item" data-aos="fade-up" data-aos-delay="200">
+            <div class="accordion-header">
+                כמה זמן מחזיק טיפול גבות?
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="accordion-content">
+                <p>משך הזמן שבו הגבות נשמרות תלוי בטכניקה ובסוג הגבות של הלקוחה, בדרך כלל בין 1 ל-2 שנים.
+                    תחזוקה שנתית יכולה להאריך את התוצאה.</p>
+            </div>
+        </div>
+
+        <div class="accordion-item" data-aos="fade-up" data-aos-delay="300">
+            <div class="accordion-header">
+                האם הטיפול כואב?
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="accordion-content">
+                <p>אנו משתמשים בחומרי הרדמה מקומיים ובטכניקות עדינות כדי להקטין את הכאב. רוב הלקוחות חוות אי-נוחות
+                    קלה בלבד.</p>
+            </div>
+        </div>
+
+        <div class="accordion-item" data-aos="fade-up" data-aos-delay="400">
+            <div class="accordion-header">
+                האם יש המלצות לאחר הטיפול?
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="accordion-content">
+                <p>לאחר הטיפול מומלץ להימנע מחשיפה לשמש ישירה, בריכות ושימוש במוצרים כימיים על אזור הגבות במשך
+                    כמה ימים. אנו מספקים הוראות מדויקות לאחר כל טיפול.</p>
+            </div>
+        </div>
+
+        <div class="accordion-item" data-aos="fade-up" data-aos-delay="500">
+    <div class="accordion-header">
+        כמה זמן לוקח טיפול מיקרובליידינג?
+        <i class="fas fa-chevron-down"></i>
+    </div>
+    <div class="accordion-content">
+        <p>הטיפול בדרך כלל אורך בין שעה לשעה וחצי, תלוי בצורת הגבות ובצרכים של הלקוחה.</p>
+    </div>
+</div>
+
+<div class="accordion-item" data-aos="fade-up" data-aos-delay="600">
+    <div class="accordion-header">
+        האם ניתן לטפל בגבות לאחר טיפולים קוסמטיים אחרים?
+        <i class="fas fa-chevron-down"></i>
+    </div>
+    <div class="accordion-content">
+        <p>כן, אך יש להמתין לפחות שבועיים לאחר טיפולים באזור הפנים, כדי להבטיח שהתוצאה תהיה מיטבית וללא סיכונים.</p>
+    </div>
+</div>
+
+
+    </main>
+
+   <div id="footer"></div>
+
+<script>
+fetch("footer.html")
+  .then(response => response.text())
+  .then(data => document.getElementById("footer").innerHTML = data);
+</script>
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, offset: 100, once: true });
+
+        const accordionItems = document.querySelectorAll('.accordion-item');
+
+        accordionItems.forEach(item => {
+            const header = item.querySelector('.accordion-header');
+            header.addEventListener('click', () => {
+                accordionItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+                item.classList.toggle('active');
+            });
+        });
+               const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const nav = document.querySelector('.nav');
+
+        mobileMenuToggle.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+    </script>
+      <script>
+fetch("nav.html")
+  .then(response => response.text())
+  .then(data => {
+      document.getElementById("nav").innerHTML = data;
+
+      const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+      const nav = document.querySelector('.nav');
+
+      mobileMenuToggle.addEventListener('click', () => {
+          nav.classList.toggle('active');
+      });
+  });
+</script>
+</body>
+
+</html>
